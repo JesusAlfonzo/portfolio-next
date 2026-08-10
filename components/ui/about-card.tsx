@@ -10,7 +10,7 @@ export function AboutCard() {
     >
       <div className={"relative w-74 h-74 mb-4 md:mb-0"}>
         <Image
-          src={"/profile.jpg"}
+          src={"/images/profile-pic/profile.jpg"}
           width={800}
           height={800}
           alt={"Photo1"}
@@ -19,7 +19,7 @@ export function AboutCard() {
           }
         />
         <Image
-          src={"/profile2.jpg"}
+          src={"/images/profile-pic/profile2.jpg"}
           alt={"Photo2"}
           width={800}
           height={800}
@@ -118,7 +118,7 @@ export function AboutCard() {
           <span className="text-gray-400 text-xl">|</span>
 
           <a
-            href="https://www.linkedin.com/in/jesusalfonzo/"
+            href="https://www.linkedin.com/in/jesus-alfonzo-523900294"
             target="_blank"
             rel="noopener"
             aria-label="LinkedIn"
@@ -146,7 +146,7 @@ export function AboutCard() {
             target={"_blank"}
             rel={"noopener noreferrer"}
           >
-            Contact Me
+            Contactame
           </ContactButton>
         </div>
       </div>
