@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/shadcn/navigation-menu";
 import { ThemeProvider } from "@/components/layout/theme-provider";
 import { ModeToggle } from "@/components/ui/shadcn/mode-toggle";
+import { Analytics } from "@vercel/analytics/next"
 
 import "./globals.css";
 
@@ -51,6 +52,7 @@ export default function RootLayout({
       )}
     >
 <body className="min-h-screen flex flex-col text-foreground dark:bg-black">
+  <Analytics />
   <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
     
     <header className="flex justify-center items-center w-full px-4 py-6 dark:bg-black">
