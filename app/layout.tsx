@@ -6,13 +6,11 @@ import {
   Playfair_Display,
 } from "next/font/google";
 import { cn } from "@/lib/utils";
-import {
-  NavigationMenu,
-  NavigationMenuList,
-} from "@/components/ui/shadcn/navigation-menu";
 import { ThemeProvider } from "@/components/layout/theme-provider";
-import { ModeToggle } from "@/components/ui/shadcn/mode-toggle";
-import { Analytics } from "@vercel/analytics/next"
+import { Header } from "@/components/layout/header";
+import { LiquidGlassBackground } from "@/components/layout/liquid-glass-background";
+import { Analytics } from "@vercel/analytics/next";
+import { PERSONAL_INFO } from "@/data/portfolio";
 
 import "./globals.css";
 
@@ -28,8 +26,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jesus Alfonzo - Portfolio",
-  description: "Portfolio Jesus Alfonzo",
+  title: `${PERSONAL_INFO.name} - Portfolio`,
+  description: `Portafolio profesional de ${PERSONAL_INFO.name}, ${PERSONAL_INFO.role}. Especializado en backend, infraestructura y desarrollo de software escalable.`,
 };
 
 export default function RootLayout({
@@ -39,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="es"
       suppressHydrationWarning
       className={cn(
         "h-full antialiased",
@@ -48,25 +46,16 @@ export default function RootLayout({
         "font-sans",
         notoSans.variable,
         playfairDisplayHeading.variable,
-        "dark:bg-black",
       )}
     >
-<body className="min-h-screen flex flex-col text-foreground dark:bg-black">
-  <Analytics />
-  <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-    
-    <header className="flex justify-center items-center w-full px-4 py-6 dark:bg-black">
-      <NavigationMenu>
-        <NavigationMenuList>
-          <ModeToggle />
-        </NavigationMenuList>
-      </NavigationMenu>
-    </header>
-
-    <main className="flex-1 w-full">{children}</main>
-    
-  </ThemeProvider>
-</body>
+      <body className="min-h-screen flex flex-col text-foreground bg-background relative selection:bg-blue-500/20 dark:selection:bg-indigo-500/25">
+        <Analytics />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <LiquidGlassBackground />
+          <Header />
+          <div className="flex-1 w-full">{children}</div>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
