@@ -24,10 +24,23 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
 
         {/* Address / Domain Capsule */}
-        <div className="flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-mono text-muted-foreground/80 bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 max-w-[160px] truncate">
-          <Globe className="w-3 h-3 shrink-0 opacity-70 text-blue-500 dark:text-indigo-400" />
-          <span className="truncate">{project.previewUrl || "app.local"}</span>
-        </div>
+        {project.link ? (
+          <Link
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            title={`Visitar ${project.previewUrl || project.link}`}
+            className="flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-mono text-muted-foreground/80 hover:text-foreground bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 border border-black/5 dark:border-white/5 transition-colors max-w-[160px] truncate group/url cursor-pointer"
+          >
+            <Globe className="w-3 h-3 shrink-0 opacity-70 text-blue-500 dark:text-indigo-400 group-hover/url:opacity-100 transition-opacity" />
+            <span className="truncate">{project.previewUrl || "app.local"}</span>
+          </Link>
+        ) : (
+          <div className="flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-mono text-muted-foreground/80 bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 max-w-[160px] truncate">
+            <Globe className="w-3 h-3 shrink-0 opacity-70 text-blue-500 dark:text-indigo-400" />
+            <span className="truncate">{project.previewUrl || "app.local"}</span>
+          </div>
+        )}
 
         {/* Status Pill Indicator */}
         {isOperativo ? (

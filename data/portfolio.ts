@@ -148,13 +148,13 @@ export const PROJECTS: ProjectItem[] = [
     title: "QR Generator",
     description:
       "Aplicación interactiva construida en Python para generar, personalizar y descargar códigos QR de alta resolución con opciones de configuración y formatos visuales.",
-    image: "/images/projects/project-working-on-it-dark.webp",
+    image: "/images/projects/qrsite.webp",
     status: "operativo",
     badge: "Python",
-    previewUrl: "qr-generator.dev",
-    link: "https://github.com/JesusAlfonzo/QR-generator",
+    previewUrl: "qr-studi0.vercel.app",
+    link: "https://qr-studi0.vercel.app",
     github: "https://github.com/JesusAlfonzo/QR-generator",
-    tags: ["Python"],
+    tags: ["Python", "FastAPI", "Vite"],
   },
   {
     id: 3,
