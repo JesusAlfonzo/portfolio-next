@@ -12,21 +12,21 @@ export default function Home() {
       <main className="flex flex-col w-full max-w-3xl flex-1 py-2 px-4 sm:px-8 md:px-16 gap-8">
         <HeroSection />
 
-        <Separator className="w-full h-px bg-gradient-to-r from-transparent via-blue-500/25 dark:via-indigo-500/25 to-transparent border-none" />
+        <Separator className="w-full h-px bg-linear-to-r from-transparent via-blue-500/25 dark:via-indigo-500/25 to-transparent border-none" />
 
         <AboutSection />
 
         <GallerySection />
 
-        <Separator className="w-full h-px mt-2 bg-gradient-to-r from-transparent via-blue-500/25 dark:via-indigo-500/25 to-transparent border-none" />
+        <Separator className="w-full h-px mt-2 bg-linear-to-r from-transparent via-blue-500/25 dark:via-indigo-500/25 to-transparent border-none" />
 
         <ExperienceSection />
 
-        <Separator className="w-full h-px bg-gradient-to-r from-transparent via-blue-500/25 dark:via-indigo-500/25 to-transparent border-none" />
+        <Separator className="w-full h-px bg-linear-to-r from-transparent via-blue-500/25 dark:via-indigo-500/25 to-transparent border-none" />
 
         <ProjectsSection />
 
-        <Separator className="w-full h-px bg-gradient-to-r from-transparent via-blue-500/25 dark:via-indigo-500/25 to-transparent border-none" />
+        <Separator className="w-full h-px bg-linear-to-r from-transparent via-blue-500/25 dark:via-indigo-500/25 to-transparent border-none" />
 
         <ContactSection />
       </main>
