@@ -60,8 +60,8 @@ function Carousel({
     },
     plugins,
   );
-  const [canScrollPrev, setCanScrollPrev] = React.useState(false);
-  const [canScrollNext, setCanScrollNext] = React.useState(false);
+  const [canScrollPrev, setCanScrollPrev] = React.useState(Boolean(opts?.loop));
+  const [canScrollNext, setCanScrollNext] = React.useState(Boolean(opts?.loop));
 
   const onSelect = React.useCallback((api: CarouselApi) => {
     if (!api) return;
@@ -97,6 +97,7 @@ function Carousel({
 
   React.useEffect(() => {
     if (!api) return;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     onSelect(api);
     api.on("reInit", onSelect);
     api.on("select", onSelect);
@@ -226,6 +227,7 @@ function CarouselNext({
       )}
       disabled={!canScrollNext}
       onClick={scrollNext}
+      suppressHydrationWarning
       {...props}
     >
       <ChevronRightIcon />
