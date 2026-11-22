@@ -158,6 +158,19 @@ export const PROJECTS: ProjectItem[] = [
   },
   {
     id: 3,
+    title: "Vixion",
+    description:
+      "Pizarra infinita multimedia local-first (PWA) para organizar referencias visuales, videos, texto enriquecido, diagramas y dibujo a mano alzada en múltiples lienzos.",
+    image: "/images/projects/vixion-app.webp",
+    status: "operativo",
+    badge: "En Producción",
+    previewUrl: "vixion-blue.vercel.app",
+    link: "https://vixion-blue.vercel.app",
+    github: "https://github.com/JesusAlfonzo/vixion",
+    tags: ["React", "TypeScript", "Tailwind CSS", "PWA"],
+  },
+  {
+    id: 4,
     title: "Niubox",
     description:
       "Herramienta web para la gestión ágil de tareas, seguimiento de sprints y administración de proyectos en equipos multidisciplinarios.",
@@ -170,7 +183,7 @@ export const PROJECTS: ProjectItem[] = [
     tags: ["Next.js", "PostgreSQL", "Prisma", "Tailwind CSS"],
   },
   {
-    id: 4,
+    id: 5,
     title: "Chatbot IA",
     description:
       "Asistente conversacional inteligente diseñado para atención de usuarios, automatización de consultas recurrentes e integración con APIs de IA.",
